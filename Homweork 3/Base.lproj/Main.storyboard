@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="q07-9u-iuS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Podcast-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Homweork_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cAj-y9-gLi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="CZh-mW-ZfB"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="OBa-7O-ouf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cAj-y9-gLi" secondAttribute="trailing" id="1hQ-iy-toP"/>
+                            <constraint firstItem="cAj-y9-gLi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="58w-Lr-a50"/>
+                            <constraint firstItem="cAj-y9-gLi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GLf-Ge-Yu5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cAj-y9-gLi" secondAttribute="bottom" id="QAK-0g-1P7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Podcast" id="g2E-4b-ztt">
+                        <barButtonItem key="rightBarButtonItem" title="My Playlist" id="3Qh-1u-U1o">
+                            <connections>
+                                <segue destination="Szg-8P-brR" kind="show" id="97z-wv-Q0g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="cAj-y9-gLi" id="WLC-vj-ABL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895.20000000000005" y="138.98050974512745"/>
+        </scene>
+        <!--My Playlist-->
+        <scene sceneID="TCz-vh-PDA">
+            <objects>
+                <viewController id="Szg-8P-brR" customClass="MyPlaylistViewController" customModule="Homweork_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gbP-36-reA"/>
+                        <viewControllerLayoutGuide type="bottom" id="W3T-i4-ulA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d2G-rV-keC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dlb-Oz-Akt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Szg-8P-brR" id="Bjh-De-enS"/>
+                                    <outlet property="delegate" destination="Szg-8P-brR" id="u5C-g5-zXI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dlb-Oz-Akt" secondAttribute="trailing" id="HkU-NH-ElV"/>
+                            <constraint firstItem="dlb-Oz-Akt" firstAttribute="leading" secondItem="d2G-rV-keC" secondAttribute="leading" id="ghK-wa-afj"/>
+                            <constraint firstItem="dlb-Oz-Akt" firstAttribute="top" secondItem="d2G-rV-keC" secondAttribute="top" id="lNU-de-PXe"/>
+                            <constraint firstItem="W3T-i4-ulA" firstAttribute="top" secondItem="dlb-Oz-Akt" secondAttribute="bottom" id="ww6-yg-AWG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Playlist" id="gwi-Ol-ehO">
+                        <barButtonItem key="rightBarButtonItem" title="Play All" id="P1x-Ev-zuB">
+                            <connections>
+                                <action selector="btnPlayAll:" destination="Szg-8P-brR" id="1Eg-84-JrZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="dlb-Oz-Akt" id="KyC-oB-iSp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3UO-Es-SeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1684" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ovN-hB-Cev">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q07-9u-iuS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dm4-bV-ev3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yNZ-Em-uY9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="67W-T6-pFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-44" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
